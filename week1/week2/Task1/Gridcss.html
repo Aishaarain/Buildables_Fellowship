@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 70px 1fr 60px;
+      grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+      height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    aside {
+      grid-area: sidebar;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 2px 0 6px rgba(0,0,0,0.1);
+    }
+
+    main {
+      grid-area: main;
+      background: #fafafa;
+      padding: 20px;
+    }
+
+    footer {
+      grid-area: footer;
+      background: #333;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 15px 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #667eea;
+    }
+
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px auto auto 60px;
+        grid-template-areas:
+          "header"
+          "main"
+          "sidebar"
+          "footer";
+      }
+
+      aside {
+        box-shadow: none;
+        border-top: 1px solid #ddd;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        font-size: 1.2rem;
+      }
+      .card {
+        padding: 15px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header> My Grid Page</header>
+
+    <aside>
+      <h3>Navigation</h3>
+      <nav>
+        <ul>
+          <li><a href="#"> Home</a></li>
+          <li><a href="#"> About</a></li>
+          <li><a href="#"> Contact</a></li>
+          <li><a href="#"> Services</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <h2>Welcome to My Page</h2>
+      <p>This is a beautifull html page built with <b>CSS Grid</b>.</p>
+      
+      <div class="cards">
+        <div class="card"> Card One</div>
+        <div class="card"> Card Two</div>
+        <div class="card"> Card Three</div>
+         <div class="card"> Card Four</div>
+        <div class="card"> Card Five</div>
+        <div class="card"> Card Six</div>
+      
+      </div>
+    </main>
+
+    <footer> 2025 My Website | Built using Grid CSS</footer>
+  </div>
+</body>
+</html>

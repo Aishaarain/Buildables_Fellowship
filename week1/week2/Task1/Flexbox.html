@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #f8f9fc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li:hover {
+      color: #ffd369;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      color: #fff;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      background: #fff;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #ffd369;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 50px 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      flex: 1 1 250px;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #667eea;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>My FlexSite</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="hero">
+    <h2>Welcome to Flexbox World</h2>
+    <p>I built beautiful page using flex box properties, which is responsive and user friendly.</p>
+    <button>Get Started </button>
+  </section>
+
+
+  <section class="cards">
+    <div class="card">
+      <h3> Fast</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, soluta!</p>
+    </div>
+    <div class="card">
+      <h3> Beautiful</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eveniet maxime vitae!</p>
+    </div>
+    <div class="card">
+      <h3> Responsive</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ad inventore sit neque qui accusantium cumque.</p>
+    </div>
+    <div class="card">
+      <h3> Flexible</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, eveniet. Labore?</p>
+    </div>
+  </section>
+
+  <footer>
+    @ 2025 FlexSite | Built using Flexbox
+  </footer>
+
+</body>
+</html>
