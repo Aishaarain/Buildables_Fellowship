@@ -1,0 +1,19 @@
+{
+  "name": "mini-payment-method",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "server": "cd backend && npm run server",
+    "client": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "stripe": "^19.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "concurrently": "^8.2.2"
+  }
+}
